@@ -8,8 +8,8 @@ class MovieAdmin(admin.ModelAdmin):
     list_display = ('title', 'year', 'rating')
     search_fields = ('title', 'year')
     list_filter = ('year', 'genres')
-    filter_horizontal = ('actors',)  # Удобный виджет для выбора актёров
-    # Добавление полей в админке, если нужно
+    filter_horizontal = ('actors',)  
+   
     fields =   ('title', 'year', 'description', 'director', 'writers', 'genres', 'rating', 
                 'num_reviews', 'poster_image', 'trailer_url', 'duration', 'release_date', 
                 'movie_file', 'actors')
