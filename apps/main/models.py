@@ -58,7 +58,7 @@ class Celebrity(models.Model):
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
-    description = models.TextField(blank=True, null=True)  # Добавлено поле описания
+    description = models.TextField(blank=True, null=True)
     
     def __str__(self):
         return self.name
@@ -75,7 +75,7 @@ class BlogPost(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('blog_detail', args=[str(self.id)])  # Создайте `blog_detail` URL, если вам нужно
+        return reverse('blog_detail', args=[str(self.id)])
 
     class Meta:
         ordering = ['-published_date']
